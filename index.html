@@ -13,9 +13,31 @@
 
 <body>
     <header>
-    <p id="description">For greener<br> places at<br>home!</p>
-    <h1 id="title">Seedlings Swap</h1>
+        <p id="description">For greener<br> places at<br>home!</p>
+        <h1 id="title">Seedlings Swap</h1>
     </header>
+    <main>
+        <form action="/submit-form" id="survey-form">
+            <div class="form-container">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Please, enter here your name"
+                    required>
+            </div>
+            <div class="form-container">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="youremail@domain.example"
+                    required>
+            </div>
+            <div class="form-container">
+                <label for="age" id="age-label">Age</label>
+                <input type="number" name="age" id="age" class="form-control" placeholder="What is your age?" min="16"
+                    max="100" required="required">
+            </div>
+            <div class="form-container"></div>
+            <div class="form-container"></div>
+            <div class="form-container"></div>
+        </form>
+    </main>
 </body>
 
 </html>

@@ -23,3 +23,31 @@ header p {
     font-size:5vw;
     letter-spacing: 0.5vw;
 }
+form {
+    display:flex;
+    flex-flow:column wrap;
+}
+.form-container {
+    margin: 0.5em 0;
+    padding-left:16%;
+}
+input {
+    display:block;
+    color:black;
+    background:#d2df64;
+    padding: 1em;
+    border:none;
+    width:80%;
+    box-shadow:#708252 1em 0.5em;
+}
+input:hover {
+    background: #c6c5ac;
+}
+label {
+    display:block;
+    margin:0.5em 0;
+    text-transform:uppercase;
+    font-size: 2.5vw;
+    letter-spacing:0.1vw;
+    
+}

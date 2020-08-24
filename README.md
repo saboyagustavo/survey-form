@@ -7,3 +7,8 @@ Objectives: Build a Tribute Page that is functionally similar to [this example](
 ## User Stories
 > - [x] My page shall have a heading with ``id="title"`` in ``<h1>`` sized text.
 > - [x]  A short explanation with ``id="description"`` in ``<p>`` sized text.
+> - [x] create a form with ``id="survey-form"``.
+> - [x] Inside the form element, is required to the user enter her name in a field with ``id="name"``.
+> - [x] Inside the form element, is required to the user an email in a field with ``id="email"``.
+> - [] If the user enter an email that is not formatted correctly, we shall see an HTML5 validation error.
+> - [x] Inside the form, users can enter a number in a field with ``id="number"``.
