@@ -30,10 +30,21 @@
             </div>
             <div class="form-container">
                 <label for="age" id="age-label">Age</label>
-                <input type="number" name="age" id="age" class="form-control" placeholder="What is your age?" min="16"
+                <input type="number" maxlength="03" name="age" id="age" class="form-control" placeholder="What is your age?" min="16"
                     max="100" required="required">
             </div>
-            <div class="form-container"></div>
+            <div class="form-container">
+                <p>Your current role</p>
+                <select name="role" id="dropdrown" class="form-control" required>
+                    <option value disabled selected>Tell us your current role</option>
+                    <option value="student">Student</option>
+                    <option value="partTime">Part-time job</option>
+                    <option value="fullTime">Full-time job</option>
+                    <option value="retired">Retired</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
             <div class="form-container"></div>
             <div class="form-container"></div>
         </form>

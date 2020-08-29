@@ -31,8 +31,9 @@ form {
     margin: 0.5em 0;
     padding-left:16%;
 }
-input {
+input, select {
     display:block;
+    font-size:2vw;
     color:black;
     background:#d2df64;
     padding: 1em;
@@ -43,11 +44,16 @@ input {
 input:hover {
     background: #c6c5ac;
 }
-label {
+::placeholder {
+    color:#708252;
+    font-size: 1.5vw;
+    text-transform: lowercase;
+}
+label, main p {
     display:block;
     margin:0.5em 0;
     text-transform:uppercase;
     font-size: 2.5vw;
-    letter-spacing:0.1vw;
-    
+    font-weight: bolder;
+    letter-spacing:0.25vw;
 }
