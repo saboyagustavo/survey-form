@@ -1,0 +1,15 @@
+form fieldset {
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+form fieldset label {
+  display: inline;
+  margin: 0 2vw;
+  font-size: 1.75vw;
+}
+
+form fieldset input[type='radio'] {
+  height: 2rem;
+}

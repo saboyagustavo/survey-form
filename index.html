@@ -2,39 +2,50 @@
 <html lang="en-us">
 
 <head>
-    <meta charset="utf-8" <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seedlings Form</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <!-- 
+    <link rel="stylesheet" href="./styles/form.css">
+    <link rel="stylesheet" href="./styles/radio.css">
+    <link rel="stylesheet" href="./styles/check.css">
+     -->
+    <link rel="shortcut icon" href="./media/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,500;0,600;1,400;1,500&family=Pacifico&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;500;700;800&family=Pacifico&display=swap"
         rel="stylesheet">
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
 
 <body>
     <header>
-        <p id="description">For greener<br> places at<br>home!</p>
+        <div class="container">
+            <p id="hero">For greener<br> places at<br>home!</p>
+            <img id="logo" src="./media/logo.png" alt="Flat icons representing seeds for Seedlings swap">
+        </div>
         <h1 id="title">Seedlings Swap</h1>
     </header>
     <main>
         <form action="/submit-form" id="survey-form">
-            <div class="form-container">
+            <div class="input-container">
                 <label for="name" id="name-label">Name</label>
                 <input type="text" name="name" id="name" class="form-control" placeholder="Please, enter here your name"
                     required>
             </div>
-            <div class="form-container">
+            <div class="input-container">
                 <label for="email" id="email-label">Email</label>
                 <input type="email" name="email" id="email" class="form-control" placeholder="youremail@domain.example"
                     required>
             </div>
-            <div class="form-container">
+            <div class="input-container">
                 <label for="age" id="age-label">Age</label>
-                <input type="number" maxlength="03" name="age" id="age" class="form-control" placeholder="What is your age?" min="16"
-                    max="100" required="required">
+                <input type="number" maxlength="03" name="age" id="age" class="form-control"
+                    placeholder="What is your age?" min="16" max="100" required="required">
             </div>
-            <div class="form-container">
-                <p>Your current role</p>
+            <div class="input-container">
+                <label for="role">Your current role</label>
                 <select name="role" id="dropdrown" class="form-control" required>
                     <option value disabled selected>Tell us your current role</option>
                     <option value="student">Student</option>
@@ -45,8 +56,36 @@
                     <option value="other">Other</option>
                 </select>
             </div>
-            <div class="form-container"></div>
-            <div class="form-container"></div>
+            <div class="input-container">
+                <p>What do you seek for?</p>
+                <fieldset id="interest">
+                    <label class="radioContainer">
+                        <input type="radio" name="interest" value="donate">
+                        Donate
+                        <span class="radioCheckmark"></span>
+                    </label>
+                    <label class="radioContainer">
+                        <input type="radio" name="interest" value="receive">
+                        Receive
+                        <span class="radioCheckmark"></span>
+                    </label>
+                    <label class="radioContainer">
+                        <input type="radio" name="interest" value="swap">
+                        Swap
+                        <span class="radioCheckmark"></span>
+                    </label>
+                </fieldset>
+            </div>
+
+            <div class="input-container">
+                <label class="checkContainer">One
+                    <input type="checkbox" checked="checked">
+                    <span class="checkCheckmark"></span>
+            </div>
+
+            <div class="input-container">
+                <textarea name="suggestions" id="suggestions" cols="30" rows="5"></textarea>
+            </div>
         </form>
     </main>
 </body>

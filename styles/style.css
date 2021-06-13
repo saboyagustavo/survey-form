@@ -1,59 +1,313 @@
+:root {
+  --white: #fff;
+  /* input active */
+  --green-200: #c6c5ac;
+  /* input body */
+  --green-400: #d2df64;
+  /* input shadow */
+  --green-700: #708252;
+  /* background */
+  --green-900: #08371b;
+
+  --gray-300: #c7d0d8;
+  --gray-400: #9aa7b2;
+  --gray-500: #77838d;
+
+  /* input text */
+  --black: #0e1d14;
+}
+
 * {
-    box-sizing:border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration:none;
-    list-style: none;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
+
+/* ---------- RESPONSIVENESS BREAKPOINTS */
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* ----------------------------- GENERAL */
 body {
-    padding: 2.5vw;
-    width: 80vw;
-    margin: 0 auto;
-    background-color: #08371b;
+  background-color: var(--green-900);
+  color: var(--white);
+  font-size: 1.25rem;
+  -webkit-font-smoothing: antialiased;
 }
-header h1 {
-    font-family:'Pacifico', handwriting;
-    font-size: 7vw;
-    text-align:center;
+
+body,
+button,
+select,
+textarea,
+input {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--white);
 }
-header p {
-    font-family:'Bebas Neue', sans-serif;
-    font-size:5vw;
-    letter-spacing: 0.5vw;
+
+/* ----------------------- HEADER */
+header {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 1vw;
+}
+
+#title {
+  font-family: 'Pacifico', handwriting;
+  font-size: 6rem;
+  text-align: center;
+  text-shadow: 0.5vw 0.25vw var(--black);
+}
+
+#hero {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+}
+
+#logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+/* ----------------------------- BODY */
+main {
+  max-width: 70rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+/* ----------------------------- FORM */
 form {
-    display:flex;
-    flex-flow:column wrap;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+  margin: 0 auto;
+  min-width: 4.5rem;
 }
-.form-container {
-    margin: 0.5em 0;
-    padding-left:16%;
+
+.input-container {
+  width: 100%;
+  margin: 1vw 0;
+  padding-left: 16%;
 }
-input, select {
-    display:block;
-    font-size:2vw;
-    color:black;
-    background:#d2df64;
-    padding: 1em;
-    border:none;
-    width:80%;
-    box-shadow:#708252 1em 0.5em;
+
+.input-container label,
+.input-container p {
+  display: block;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+  font-weight: 800;
+  letter-spacing: 0.25vw;
+  font-weight: 700;
 }
-input:hover {
-    background: #c6c5ac;
+
+.input-container input[type='text'],
+.input-container input[type='email'],
+.input-container input[type='number'],
+.input-container textarea,
+.input-container select {
+  background-color: var(--green-400);
+  box-shadow: var(--green-700) 1rem 0.5rem;
+
+  display: block;
+  width: 80%;
+  padding: 1rem;
+
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: black;
+  border: none;
+  resize: none;
 }
-::placeholder {
-    color:#708252;
-    font-size: 1.5vw;
-    text-transform: lowercase;
+
+.input-container ::placeholder {
+  color: var(--green-700);
+  font-weight: lighter;
+  text-transform: lowercase;
 }
-label, main p {
-    display:block;
-    margin:0.5em 0;
-    text-transform:uppercase;
-    font-size: 2.5vw;
-    font-weight: bolder;
-    letter-spacing:0.25vw;
+
+.input-container input:active,
+.input-container input:focus,
+.input-container select:active,
+.input-container select:focus {
+  background-color: var(--green-200);
+}
+
+/* ------------------------------- FORM FILDSETS */
+form fieldset {
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+form fieldset label {
+  display: inline;
+}
+
+form fieldset input[type='radio'] {
+  height: 2rem;
+}
+
+/* -------------------------------FORM RADIO BUTTONS */
+/* The radioContainer */
+.radioContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radioContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radioCheckmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--green-700);
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radioContainer:hover input ~ .radioCheckmark {
+  background-color: var(--green-200);
+}
+
+/* When the radio button is checked, add a blue background */
+.radioContainer input:checked ~ .radioCheckmark {
+  background-color: var(--green-400);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radioCheckmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radioContainer input:checked ~ .radioCheckmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radioContainer .radioCheckmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* The checkContainer */
+.checkContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkCheckmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkContainer:hover input ~ .checkCheckmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkContainer input:checked ~ .checkCheckmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkCheckmark/indicator (hidden when not checked) */
+.checkCheckmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkCheckmark when checked */
+.checkContainer input:checked ~ .checkCheckmark:after {
+  display: block;
+}
+
+/* Style the checkCheckmark/indicator */
+.checkContainer .checkCheckmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
