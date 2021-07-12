@@ -146,7 +146,7 @@ form {
 
   font-size: 1.125rem;
   font-weight: 500;
-  color: black;
+  color: var(--black);
   border: none;
   resize: none;
 }
@@ -179,13 +179,21 @@ form fieldset input[type='radio'] {
   height: 2rem;
 }
 
-/* -------------------------------FORM RADIO BUTTONS */
+/* ------------------------------- W3 FORM RADIO BUTTONS */
 /* The radioContainer */
-.radioContainer {
+#interest {
+  max-width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.radioLabel {
   display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
+  margin-left: 2rem;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -244,6 +252,7 @@ form fieldset input[type='radio'] {
   background: white;
 }
 
+/* -------------------------------W3 FORM CHECKBOXES */
 /* The checkContainer */
 .checkContainer {
   display: block;
@@ -274,17 +283,17 @@ form fieldset input[type='radio'] {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: var(--green-700);
 }
 
 /* On mouse-over, add a grey background color */
 .checkContainer:hover input ~ .checkCheckmark {
-  background-color: #ccc;
+  background-color: var(--green-200);
 }
 
 /* When the checkbox is checked, add a blue background */
 .checkContainer input:checked ~ .checkCheckmark {
-  background-color: #2196f3;
+  background-color: var(--green-400);
 }
 
 /* Create the checkCheckmark/indicator (hidden when not checked) */
@@ -310,4 +319,49 @@ form fieldset input[type='radio'] {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.check-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.check-section2 label:not(:first-child) {
+  margin-left: 2rem;
+}
+
+label {
+  color: var(--green-200);
+}
+
+.submit-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button[type='submit'] {
+  background: var(--gray-300);
+  padding: 1rem 10rem;
+  border: none;
+  letter-spacing: 0.5rem;
+  color: var(--black);
+  font-weight: bolder;
+  font-size: 2rem;
+
+  box-shadow: 0.5rem 0 var(--gray-400);
+  box-shadow: 0.5rem 0.5rem 5px var(--gray-500);
+  cursor: pointer;
+
+  transition: filter 0.25s;
+}
+
+button[type='submit']:hover {
+  filter: brightness(1.25);
+}
+
+button[type='submit']:active {
+  filter: brightness(0.8);
 }

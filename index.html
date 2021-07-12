@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seedlings Form</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <!-- 
-    <link rel="stylesheet" href="./styles/form.css">
-    <link rel="stylesheet" href="./styles/radio.css">
-    <link rel="stylesheet" href="./styles/check.css">
-     -->
     <link rel="shortcut icon" href="./media/logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -22,7 +17,7 @@
 <body>
     <header>
         <div class="container">
-            <p id="hero">For greener<br> places at<br>home!</p>
+            <p id="description">For greener<br> places at<br>home!</p>
             <img id="logo" src="./media/logo.png" alt="Flat icons representing seeds for Seedlings swap">
         </div>
         <h1 id="title">Seedlings Swap</h1>
@@ -40,13 +35,13 @@
                     required>
             </div>
             <div class="input-container">
-                <label for="age" id="age-label">Age</label>
-                <input type="number" maxlength="03" name="age" id="age" class="form-control"
-                    placeholder="What is your age?" min="16" max="100" required="required">
+                <label for="age" id="number-label">Age</label>
+                <input id="number" type="number" maxlength="03" name="age" id="age" class="form-control"
+                    placeholder="What is your age?" min="16" max="100" required>
             </div>
             <div class="input-container">
                 <label for="role">Your current role</label>
-                <select name="role" id="dropdrown" class="form-control" required>
+                <select name="role" id="dropdown" class="form-control" required>
                     <option value disabled selected>Tell us your current role</option>
                     <option value="student">Student</option>
                     <option value="partTime">Part-time job</option>
@@ -59,32 +54,73 @@
             <div class="input-container">
                 <p>What do you seek for?</p>
                 <fieldset id="interest">
-                    <label class="radioContainer">
-                        <input type="radio" name="interest" value="donate">
-                        Donate
-                        <span class="radioCheckmark"></span>
+                    <div class=radioContainer>
+                        <label class="radioLabel">
+                            <input type="radio" name="interest" value="donate">
+                            Donate
+                            <span class="radioCheckmark"></span>
+                        </label>
+                    </div>
+                    <div class=radioContainer>
+                        <label class="radioLabel">
+                            <input type="radio" name="interest" value="receive">
+                            Receive
+                            <span class="radioCheckmark"></span>
+                        </label>
+                    </div>
+                    <div class=radioContainer>
+                        <label class="radioLabel">
+                            <input type="radio" name="interest" value="swap">
+                            Swap
+                            <span class="radioCheckmark"></span>
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <div class="input-container">
+                <p>What kind of plant do you like most?</p>
+                <fieldset class="check-section">
+                    <label class="checkContainer">Flowering
+                        <input type="checkbox" value="flowering">
+                        <span class="checkCheckmark"></span>
                     </label>
-                    <label class="radioContainer">
-                        <input type="radio" name="interest" value="receive">
-                        Receive
-                        <span class="radioCheckmark"></span>
+
+                    <label class="checkContainer">Edible
+                        <input value="edible" type="checkbox" checked="checked">
+                        <span class="checkCheckmark"></span>
                     </label>
-                    <label class="radioContainer">
-                        <input type="radio" name="interest" value="swap">
-                        Swap
-                        <span class="radioCheckmark"></span>
+                    <label class="checkContainer">Decorative
+                        <input value="decorative" type="checkbox" checked="checked">
+                        <span class="checkCheckmark"></span>
                     </label>
                 </fieldset>
             </div>
 
             <div class="input-container">
-                <label class="checkContainer">One
-                    <input type="checkbox" checked="checked">
-                    <span class="checkCheckmark"></span>
+                <p>Your gardenind preferences</p>
+                <fieldset class="check-section2">
+                    <label class="checkContainer">Indoor
+                        <input value="indoor" type="checkbox" checked="checked">
+                        <span class="checkCheckmark"></span>
+                    </label>
+
+                    <label class="checkContainer">Outdoor
+                        <input value="outdoor" type="checkbox" checked="checked">
+                        <span class="checkCheckmark"></span>
+                    </label>
+                </fieldset>
             </div>
 
             <div class="input-container">
+                <p>Comments or suggestions</p>
                 <textarea name="suggestions" id="suggestions" cols="30" rows="5"></textarea>
+            </div>
+
+
+            <div class="input-container submit-container">
+                <button id="submit" type="submit">SUBMIT</button>
             </div>
         </form>
     </main>
